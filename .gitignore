@@ -1,0 +1,4 @@
+node_modules/
+# There is no build process, just ESLint for checking syntax.
+# It's not important to lock the exact versions of everything for this project.
+package-lock.json

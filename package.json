@@ -1,0 +1,22 @@
+{
+  "name": "teachingtechyt.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "test": "eslint js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teachingtechYT/teachingtechYT.github.io.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/teachingtechYT/teachingtechYT.github.io/issues"
+  },
+  "homepage": "https://teachingtechYT.github.io",
+  "devDependencies": {
+    "eslint": "^8.32.0"
+  }
+}

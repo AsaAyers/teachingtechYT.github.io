@@ -704,9 +704,27 @@ function processGcode(formName) {
     if(formName.deltaHome.checked == true) {
         gcode = gcode.replace(/G28 X0 ; home X axis/, "G28 ; home all on delta");
     }
+
+    var filename = makeGcodeFilename(formName, description);
     
     // process finished gcode file
-    downloadFile(description+'.gcode', gcode);
+    downloadFile(filename, gcode);
+}
+
+function makeGcodeFilename(formName, defaultValue) {
+    var fileName = defaultValue;
+    switch(formName.name) {
+        // case "firstlayerForm":
+        // case "baselineForm":
+        // case "retractionForm":
+        // case "accelerationForm":
+        case "temperatureForm":
+            fileName = "temperature";
+            fileName += "-bed_"+formName.bedtemp.value;
+            fileName += "-range-"+formName.temp_a1.value+"-"+formName.temp_e1.value;
+            break;
+    }
+    return fileName+'.gcode';
 }
 
 function outputSettings(formName) {
